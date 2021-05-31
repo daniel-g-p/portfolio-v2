@@ -11,73 +11,92 @@
     <title>Daniel Giustini Perez - Full-Stack Web Developer</title>
 </head>
 
-<body class="main-body">
+<body>
     <div class="body-container">
-        <div class="section-navigation">
+        <div class="body-container__section-navigation">
             <div class="active"></div>
             <div></div>
             <div></div>
             <div></div>
             <div></div>
         </div>
-        <header class="main-header">
+        <header class="body-container__header">
             <nav class="navigation-bar">
-                <img src="assets/svg/logo.svg" alt="Daniel Giustini Perez Logo">
-                <img src="assets/svg/menu.svg" alt="Navigation Menu">
+                <img src="assets/svg/logo.svg" alt="Daniel Giustini Perez Logo" class="navigation-bar__logo">
+                <img src="assets/svg/menu.svg" alt="Navigation Menu" class="open-menu">
             </nav>
-            <section class="main-section hero">
+            <div class="navigation-menu">
+                <div class="navigation-menu__links">
+                    <ul class="navigation-menu--main-links">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About Me</a></li>
+                        <li><a href="">My Work</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <hr class="line-break">
+                    <div class="social-links">
+                        <a href="">Blog</a>
+                        <div class="social-links__icons">
+                            <a href=""><img src="assets/svg/linkedin.svg" alt="LinkedIn Profile"></a>
+                            <a href=""><img src="assets/svg/github.svg" alt="GitHub Profile"></a>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/svg/close.svg" alt="Close Menu" class="close-menu">
+            </div>
+            <section class="body-container__section--hero">
                 <h3>Full-Stack Web Developer</h3>
                 <h1>Daniel Giustini Perez</h1>
                 <p>I write code to turn unique ideas into vivid realities</p>
             </section>
-            <div class="scroll-cta">
+            <div class="body-container__scroll-cta">
                 <p>Scroll to explore</p>
                 <img src="assets/svg/arrow.svg" alt="Downward Arrow">
             </div>
         </header>
         <main>
-            <section class="main-section about">
-                <div class="textblock-main">
+            <section class="body-container__section--about">
+                <div class="textblock-main--about">
                     <h2>About Me</h2>
                     <p>Hi, my name is Daniel and I embarked on my journey as a web developer in early 2021. I like to spend my time chasing new challenges and opportunities.</p>
                     <a href="about.html" class="button">Learn more</a>
                 </div>
-                <div class="image-container about">
+                <div class="image-container--about">
                     <img src="assets/jpg/portrait.jpg" alt="Photo of Me">
                 </div>
             </section>
-            <section class="main-section my-work">
+            <section class="body-container__section--my-work">
                 <h2>My Work</h2>
-                <div class="projects-carousel">
-                    <div class="image-container my-work">
+                <div class="carousel-projects">
+                    <div class="image-container--my-work">
                         <img src="assets/jpg/landscape.jpg" alt="Project 1">
                     </div>
-                    <div class="image-container my-work">
+                    <div class="image-container--my-work">
                         <img src="assets/jpg/landscape.jpg" alt="Project 2">
                     </div>
-                    <div class="image-container my-work">
+                    <div class="image-container--my-work">
                         <img src="assets/jpg/landscape.jpg" alt="Project 2">
                     </div>
                 </div>
                 <a href="" class="button">See Projects</a>
             </section>
-            <section class="main-section testimonials">
+            <section class="body-container__section--testimonials">
                 <h2>Testimonial</h2>
-                <div class="testimonials-carousel">
+                <div class="carousel-testimonials">
                     <div class="chevron-left"></div>
-                    <div class="testimonial container">
-                        <div class="testimonial">
-                            <div class="testimonial-header">
-                                <div class="image-container">
+                    <div class="carousel-testimonials__container">
+                        <div class="carousel-testimonials__container--testimonial">
+                            <div class="carousel-testimonials__header">
+                                <div class="image-container--testimonial">
                                     <img src="assets/jpg/square.jpg" alt="Testimonial Profile Photo">
                                 </div>
-                                <div class="testimonial-details">
+                                <div class="carousel-testimonials__details">
                                     <h3>First Name Last Name</h3>
                                     <p class="uppercase-text">Position at Company</p>
                                 </div>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pellentesque, purus non lobortis varius, augue nisl ultrices nisi, at fringilla justo ante in enim.</p>
-                            <div class="testimonial-links">
+                            <div class="carousel-testimonials__links">
                                 <a href="" class="standard-link">Visit Website</a>
                                 <a href="" class="standard-link">Watch Video Review</a>
                             </div>
@@ -86,15 +105,14 @@
                     <div class="chevron-right"></div>
                 </div>
             </section>
-            <section class="main-section contact">
-                <div class="textblock-main">
+            <section class="body-container__section--contact">
+                <div class="textblock-main--contact">
                     <h2>Let's connect</h2>
                     <p>Whether you want to build a new project or just want to say Hi, feel free to drop me a message and I will come back to you.</p>
                     <a href="contact.html" class="button">Learn more</a>
                 </div>
-                <div class="image-container about">
+                <div class="image-container--contact">
                     <img src="assets/jpg/landscape.jpg" alt="Project Collaboration Photo">
-                    <div class="gradient-overlay"></div>
                 </div>
             </section>
         </main>

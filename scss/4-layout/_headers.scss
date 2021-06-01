@@ -1,0 +1,22 @@
+@use "../1-abstracts/" as *;
+.navigation-bar {
+    @include flexbox(row, space-between, center);
+    padding: $s;
+    &__logo {
+        height: $l;
+    }
+    &__open-menu {
+        height: $s;
+    }
+}
+
+.navigation-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, $green, $light-blue);
+    @include flexbox(column, center, center);
+}

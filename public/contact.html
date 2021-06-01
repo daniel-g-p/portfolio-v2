@@ -9,6 +9,7 @@
     <meta name="author" content="Daniel Giustini Perez">
     <link rel="shortcut icon" type="image/png" href="assets/png/favicon.png">
     <title>About - Daniel Giustini Perez</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
@@ -56,17 +57,31 @@
                 <input type="text" name="organization" id="organization">
             </div>
             <div class="contact-form__input-field">
-                <label for="timezone">Time Zone</label>
-                <select name="timezone" id="timezone" class="contact-form__select-list">
-                    <option value="timezone">TZ Name</option>
+                <label for="language">Preferred Language</label>
+                <select name="language" id="language" class="contact-form__select-list">
+                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                    <option value="es">Espa&#241;ol</option>
+                    <option value="fr">Fran&#231;ais</option>
+                    <option value="it">Italiano</option>
                 </select>
             </div>
             <div class="contact-form__input-field">
-                <label for="Organization (optional)">Organization (optional)</label>
-                <input type="text" name="Organization (optional)" id="Organization (optional)">
+                <label for="subject">Subject Line</label>
+                <input type="text" name="subject" id="subject">
             </div>
-
+            <div class="contact-form__input-field">
+                <label for="message">Message</label>
+                <input type="text" name="message" id="message">
+            </div>
+            <div class="contact-form__input-field">
+                <label for="message">Message</label>
+                <input type="text" name="message" id="message" class="contact-form__file-upload">
+            </div>
+            <button class="contact-form__submit-button">Send</button>
         </form>
+        <p class="full-width-text">Or</p>
+        <p>Send me an email at <a href="" class="inline-link">danielgiustiniperez@gmail.com</a></p>
     </main>
     <footer>
         <nav class="footer__navigation-bar">

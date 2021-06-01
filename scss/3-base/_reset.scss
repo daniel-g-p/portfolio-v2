@@ -1,0 +1,17 @@
+@use "../1-abstracts/" as *;
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $dark-blue;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}

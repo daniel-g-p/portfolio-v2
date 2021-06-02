@@ -4,3 +4,9 @@
     justify-content: $justify-content;
     align-items: $align-items;
 }
+
+@mixin transition($duration, $function, $properties...) {
+    transition-duration: $duration;
+    transition-timing-function: $function;
+    transition-property: $properties;
+}

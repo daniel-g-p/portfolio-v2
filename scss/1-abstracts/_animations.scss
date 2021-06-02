@@ -1,0 +1,11 @@
+@use "./variables" as *;
+@keyframes fadeFromBottom {
+    0% {
+        transform: translateY($m);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

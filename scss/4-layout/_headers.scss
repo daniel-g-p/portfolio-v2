@@ -1,22 +1,198 @@
 @use "../1-abstracts/" as *;
 .navigation-bar {
     @include flexbox(row, space-between, center);
-    padding: $s;
     &__logo {
         height: $l;
+        transition: transform 0.25s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
-    &__open-menu {
-        height: $s;
+    &__burger-icon {
+        position: relative;
+        display: block;
+        width: $m;
+        height: $m;
+        z-index: 1;
+        transition: transform 0.25s ease;
+        &-component {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            display: block;
+            background-color: $white;
+            transition: all 0.5s ease;
+            &:nth-of-type(1) {
+                top: 0;
+                &.active {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+            }
+            &:nth-of-type(2) {
+                top: 50%;
+                transform: translateY(-50%);
+                &.active {
+                    left: 50%;
+                    width: 0;
+                    opacity: 0;
+                }
+            }
+            &:nth-of-type(3) {
+                bottom: 0;
+                &.active {
+                    bottom: 50%;
+                    transform: translateY(50%) rotate(-45deg);
+                }
+            }
+        }
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
     }
 }
 
 .navigation-menu {
     position: fixed;
-    top: 0;
+    top: -100%;
     left: 0;
-    z-index: 1;
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(to bottom right, $green, $light-blue);
-    @include flexbox(column, center, center);
+    background-image: linear-gradient(to right bottom, $green, $light-blue);
+    transition: top 0.5s ease;
+    &__container {
+        width: inherit;
+        height: inherit;
+        @include flexbox(column, center, center);
+    }
+    &__main-links {
+        @include flexbox(column, center, center);
+    }
+    &__main-link {
+        position: relative;
+        font-size: 1.5rem;
+        color: $white;
+        margin-bottom: $m;
+        opacity: 0;
+        &::after {
+            position: absolute;
+            top: 1em;
+            left: 50%;
+            content: "";
+            display: block;
+            width: 0;
+            height: 4px;
+            background-color: $white;
+            opacity: 0;
+            transition: all 0.25s ease;
+        }
+        &:hover {
+            &::after {
+                left: 0;
+                width: 100%;
+                opacity: 1;
+            }
+        }
+    }
+    &__line-break {
+        display: block;
+        width: 50%;
+        height: 1px;
+        background-color: $white;
+        margin-bottom: $m;
+        opacity: 0;
+    }
+    &__social-links {
+        @include flexbox(row, center, center);
+        opacity: 0;
+    }
+    &__social-link {
+        color: $white;
+        margin: 0 $xs;
+        transition: transform 0.25s ease;
+        & svg {
+            width: $m;
+            fill: $white;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &.active {
+        top: 0;
+    }
 }
+
+// .navigation-bar {
+//     @include flexbox(row, space-between, center);
+//     padding: $s;
+//     &__logo {
+//         height: $l;
+//     }
+//     &__open-menu {
+//         height: $s;
+//     }
+// }
+// .navigation-menu {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     z-index: 1;
+//     width: 100vw;
+//     height: 100vh;
+//     background-image: linear-gradient(to bottom right, $green, $light-blue);
+//     @include flexbox(column, center, center);
+//     &__main-links {
+//         text-align: center;
+//         li {
+//             margin: $m auto;
+//             a {
+//                 position: relative;
+//                 &::after {
+//                     content: "";
+//                     display: block;
+//                     position: absolute;
+//                     left: 50%;
+//                     width: 0%;
+//                     height: 4px;
+//                     opacity: 0;
+//                     background-color: $white;
+//                     @include transition(0.25s, ease, opacity, width, left);
+//                 }
+//                 &:hover::after {
+//                     width: 100%;
+//                     left: 0%;
+//                     opacity: 1;
+//                 }
+//             }
+//         }
+//     }
+//     &__line-break {
+//         display: block;
+//         width: 150%;
+//         margin-left: -25%;
+//         height: 1px;
+//         background-color: $white;
+//         margin-bottom: $m
+//     }
+//     &__social-links {
+//         @include flexbox(row, center, center);
+//         svg {
+//             height: $m;
+//             fill: $white;
+//             margin: auto $s;
+//             &:hover {
+//                 fill: $light-grey;
+//             }
+//         }
+//     }
+//     .close-menu {
+//         position: absolute;
+//         top: $m;
+//         right: $m;
+//         fill: $white;
+//         height: $m;
+//     }
+// }

@@ -1,27 +1,27 @@
-@use "../1-abstracts/" as *;
-.body-container {
-    position: relative;
-    height: 100vh;
-    overflow-y: scroll;
-    background: linear-gradient(to right bottom, #00000090, #00000090), url("../assets/jpg/background.jpg");
-    background-size: cover;
-    &__section-navigation {
-        position: fixed;
-        bottom: $s;
-        left: 50%;
-        transform: translateX(-50%);
-        @include flexbox(row,
-        center,
-        center);
-        & div {
-            display: block;
-            border: 4px solid $white;
-            height: $s;
-            width: $s;
-            margin: 0 $xs;
-            &.active {
-                background-color: $white;
-            }
-        }
-    }
-}
+// @use "../1-abstracts/" as *;
+// .body-container {
+//     position: relative;
+//     height: 100vh;
+//     overflow-y: scroll;
+//     background: linear-gradient(to right bottom, #00000090, #00000090), url("../assets/jpg/background.jpg");
+//     background-size: cover;
+//     &__section-navigation {
+//         position: fixed;
+//         bottom: $s;
+//         left: 50%;
+//         transform: translateX(-50%);
+//         @include flexbox(row,
+//         center,
+//         center);
+//         & div {
+//             display: block;
+//             border: 4px solid $white;
+//             height: $s;
+//             width: $s;
+//             margin: 0 $xs;
+//             &.active {
+//                 background-color: $white;
+//             }
+//         }
+//     }
+// }

@@ -9,3 +9,26 @@
         opacity: 1;
     }
 }
+
+@keyframes ctaFadeIn {
+    0% {
+        transform: translateY(-$m);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ctaBounce {
+    0% {
+        transform: translateY(0) scale(1.5);
+    }
+    50% {
+        transform: translateY(-$xs) scale(1.5);
+    }
+    100% {
+        transform: translateY(0) scale(1.5);
+    }
+}

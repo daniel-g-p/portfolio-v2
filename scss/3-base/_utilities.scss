@@ -1,6 +1,6 @@
 @use "../1-abstracts/" as *;
 .fadeFromBottom {
-    animation: forwards fadeFromBottom 0.25s ease;
+    animation: forwards fadeFromBottom 0.25s ease 0.25s;
 }
 
 .unclickable {

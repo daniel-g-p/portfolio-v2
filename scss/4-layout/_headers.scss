@@ -1,5 +1,10 @@
 @use "../1-abstracts/" as *;
 .navigation-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: $s;
     @include flexbox(row, space-between, center);
     &__logo {
         height: $l;
@@ -11,9 +16,9 @@
     &__burger-icon {
         position: relative;
         display: block;
-        width: $m;
-        height: $m;
-        z-index: 1;
+        width: 2rem;
+        height: 1.5rem;
+        z-index: 2;
         transition: transform 0.25s ease;
         &-component {
             position: absolute;
@@ -62,6 +67,7 @@
     height: 100vh;
     background-image: linear-gradient(to right bottom, $green, $light-blue);
     transition: top 0.5s ease;
+    z-index: 1;
     &__container {
         width: inherit;
         height: inherit;
@@ -124,75 +130,3 @@
         top: 0;
     }
 }
-
-// .navigation-bar {
-//     @include flexbox(row, space-between, center);
-//     padding: $s;
-//     &__logo {
-//         height: $l;
-//     }
-//     &__open-menu {
-//         height: $s;
-//     }
-// }
-// .navigation-menu {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     z-index: 1;
-//     width: 100vw;
-//     height: 100vh;
-//     background-image: linear-gradient(to bottom right, $green, $light-blue);
-//     @include flexbox(column, center, center);
-//     &__main-links {
-//         text-align: center;
-//         li {
-//             margin: $m auto;
-//             a {
-//                 position: relative;
-//                 &::after {
-//                     content: "";
-//                     display: block;
-//                     position: absolute;
-//                     left: 50%;
-//                     width: 0%;
-//                     height: 4px;
-//                     opacity: 0;
-//                     background-color: $white;
-//                     @include transition(0.25s, ease, opacity, width, left);
-//                 }
-//                 &:hover::after {
-//                     width: 100%;
-//                     left: 0%;
-//                     opacity: 1;
-//                 }
-//             }
-//         }
-//     }
-//     &__line-break {
-//         display: block;
-//         width: 150%;
-//         margin-left: -25%;
-//         height: 1px;
-//         background-color: $white;
-//         margin-bottom: $m
-//     }
-//     &__social-links {
-//         @include flexbox(row, center, center);
-//         svg {
-//             height: $m;
-//             fill: $white;
-//             margin: auto $s;
-//             &:hover {
-//                 fill: $light-grey;
-//             }
-//         }
-//     }
-//     .close-menu {
-//         position: absolute;
-//         top: $m;
-//         right: $m;
-//         fill: $white;
-//         height: $m;
-//     }
-// }

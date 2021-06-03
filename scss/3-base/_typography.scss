@@ -15,20 +15,34 @@
 
 @font-face {
     font-family: "Squada One";
-    src: url("/assets/fonts/squadaone.woff2") format("woff2"), url("/assets/fonts/squadaone.woff") format("woff");
+    src: url("../assets/fonts/squadaone.woff2") format("woff2"), url("../assets/fonts/squadaone.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 html {
-    font: 400 125%/1 "Montserrat", sans-serif;
+    font: 400 100%/2 "Montserrat", sans-serif;
     letter-spacing: 0.25em;
+}
+
+h1 {
+    font: normal 3.375rem/1.25 "Squada One", sans-serif;
+}
+
+h2 {
+    font: normal 2.5rem/1.25 "Squada One", sans-serif;
+}
+
+h3 {
+    font: bold 1/2 "Montserrat", sans-serif;
+    text-transform: uppercase;
 }
 
 a {
     text-transform: uppercase;
     font-weight: 700;
     text-decoration: none;
+    line-height: 1;
      :hover {
         cursor: pointer;
     }

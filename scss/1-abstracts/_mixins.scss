@@ -1,3 +1,4 @@
+@use "./variables" as *;
 @mixin flexbox($direction, $justify-content, $align-items) {
     display: flex;
     flex-direction: $direction;
@@ -9,4 +10,10 @@
     transition-duration: $duration;
     transition-timing-function: $function;
     transition-property: $properties;
+}
+
+@mixin gradient-image($url) {
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to right bottom, $green-transparent, $medium-blue-transparent), url($url);
 }

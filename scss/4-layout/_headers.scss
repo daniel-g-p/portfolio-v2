@@ -4,13 +4,14 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: $s;
+    padding: $m;
     @include flexbox(row, space-between, center);
     &__logo {
-        height: $l;
-        transition: transform 0.25s ease;
+        height: 4.5rem;
+        transition: opacity 0.25s ease;
+        opacity: 0.75;
         &:hover {
-            transform: scale(1.1);
+            opacity: 1;
         }
     }
     &__burger-icon {
@@ -19,7 +20,8 @@
         width: 2rem;
         height: 1.5rem;
         z-index: 2;
-        transition: transform 0.25s ease;
+        opacity: 0.75;
+        transition: opacity 0.25s ease;
         &-component {
             position: absolute;
             left: 0;
@@ -53,7 +55,7 @@
             }
         }
         &:hover {
-            transform: scale(1.1);
+            opacity: 1;
             cursor: pointer;
         }
     }

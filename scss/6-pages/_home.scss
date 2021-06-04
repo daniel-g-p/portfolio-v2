@@ -7,7 +7,7 @@
         height: 100vh;
         background-image: linear-gradient($dark-blue-transparent, $dark-blue-transparent), url("../assets/jpg/background.jpg");
         background-size: cover;
-        padding: 0 $s;
+        padding: 0 $m;
     }
     // &__navigation-buttons {
     //     position: fixed;
@@ -61,6 +61,7 @@
     center,
     center);
     text-align: center;
+    padding: $m 0;
     &__heading {
         color: $white;
         margin-bottom: $s;
@@ -73,9 +74,14 @@
 }
 
 .about-section {
+    @include flexbox(column,
+    flex-start,
+    center);
+    height: 100vh;
     position: relative;
-    padding: $l 0;
+    padding: $m 0;
     color: $white;
+    text-align: center;
     &__heading {
         margin-bottom: $s;
     }
@@ -83,7 +89,23 @@
         margin-bottom: $s;
     }
     &__image {
-        margin-top: $m;
+        @include gradient-image("../assets/jpg/portrait.jpg");
+        margin: $m auto 0;
         width: 100%;
+        height: 100%;
+    }
+}
+
+.my-work-section {
+    height: 100vh;
+    @include flexbox(column,
+    center,
+    center);
+    position: relative;
+    padding: $m 0;
+    color: $white;
+    text-align: center;
+    &__heading {
+        margin-bottom: $m;
     }
 }

@@ -2,17 +2,30 @@
 .button-special {
     position: relative;
     display: inline-block;
-    width: 12em;
-    padding: $xs 0;
+    width: 12rem;
+    padding: 0.75rem 0;
     text-align: center;
     font: bold 1rem "Montserrat", sans-serif;
     color: $white;
     background-image: linear-gradient(to right, $light-blue-transparent, $green-transparent);
     background-size: 200%;
     background-position: left;
-    clip-path: polygon(0 1em, 1em 0, 11em 0, 12em 1em, 11em 2em, 1em 2em);
+    clip-path: polygon(0 1.25rem, 1.25rem 0, 10.75rem 0, 12rem 1.25rem, 10.75rem 2.5rem, 1.25rem 2.5rem);
     transition: background-position 0.5s ease;
     &:hover {
         background-position: right;
+    }
+}
+
+.button-outline {
+    border: 2px solid $white;
+    padding: 0.75em 1.5em;
+    font-size: 0.75rem;
+    color: $white;
+    text-align: center;
+    @include transition(0.25s, ease, color, background-color);
+    &:hover {
+        background-color: $white;
+        color: $dark-blue;
     }
 }

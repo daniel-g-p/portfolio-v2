@@ -29,3 +29,25 @@ const fadeInLink = link => {
     });
     return promise;
 };
+
+const carouselProjects = document.querySelectorAll(".projects-carousel__project");
+
+carouselProjects.forEach(p => p.addEventListener("click", () => {
+    if (!p.classList.contains("waiting")) {
+        return;
+    } else {
+        changeProject(p);
+    }
+
+}));
+
+const changeProject = (project) => {
+    let direction = "left";
+    if (project.classList.contains("waiting-left")) {
+        direction = "right";
+    };
+    const activeProject = document.querySelector(".projects-carousel__project.active");
+    const oppositeProject = document.querySelector(`.projects-carousel__project.waiting-${direction})`);
+    activeProject.classList.replace("active", `waiting waiting-${direction}`);
+    oppositeProject.classList.replace("waiting", )
+}
